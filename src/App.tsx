@@ -1,7 +1,11 @@
 import {useState} from 'react'
 import './App.scss'
+import {Movie} from './types/Movie'
+import {Card} from './Card'
+
+
 export const App = () => {
-  const [movies, setMovies] = useState([])
+  const [movies, setMovies] = useState<Movie[]>([])
 
   const loadMovies = () => {
     fetch('https://api.b7web.com.br/cinema/')
@@ -14,10 +18,10 @@ export const App = () => {
   return (
     <div className='container'>
         <button className='button' onClick={loadMovies}>Carregar filmes</button>
-
-        <h3>Total de Filmes {movies.length}</h3>
-        <div>
-
+        <div className='cardbox'>
+          {movies.map((item, index) => (
+            <Card title={item.titulo} avatar={item.avatar} key={index}/>
+          ))}
         </div>
     </div>
   )
