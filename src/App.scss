@@ -1,0 +1,23 @@
+body{
+    background-color: #112B3C;
+    overflow: hidden;
+    font-family: Raleway, sans-serif;
+    .container{
+        color: #EFEFEF;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        display: flex;
+        flex-direction:column ;
+        justify-content: center;
+        align-items: center;
+
+        .button{
+            padding: 1rem;
+            border: none; 
+            border-radius: 10px;
+            background-color:#205375 ;
+            color: #EFEFEF;
+        }
+    }
+}
