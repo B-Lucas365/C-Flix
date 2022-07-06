@@ -6,7 +6,7 @@
 
 
 body{
-    background-color: #112B3C;
+    background-color: #1A0B2A;
     font-family: Raleway, sans-serif;
     .container{
         color: #EFEFEF;
@@ -19,21 +19,23 @@ body{
         }
 
         .cardbox{
-            margin-top: 3rem;
+            width: 90vw;
+            height: 400px;
+            margin-top: 2rem;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 1rem;
-            
         }
 
         .button{
             padding: 1rem;
             border: none; 
             border-radius: 10px;
-            background-color:#205375 ;
+            background-color:#F15412;
             color: #EFEFEF;
-            margin-top: 2rem;
+            font-size: 1rem;
+            cursor: pointer;
         }
     }
 }

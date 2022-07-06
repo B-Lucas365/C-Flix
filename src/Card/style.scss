@@ -11,6 +11,10 @@
     width: 14rem;
     text-align: center;
     animation: element 1.5s ease-in;
+    &:hover{
+        transform: scale(1.1);
+        transition: .5s;
+    }
     img{
         width: 13rem;
     }
