@@ -16,21 +16,21 @@ import {Header} from './Header'
 export const App = () => {
   const [movies, setMovies] = useState<Movie[]>([])
   const [loading, setLoading] = useState(false)
-  // const largura = useRef<any>(null)
-  // const [teste, setTeste] = useState(1)
+  const largura = useRef<any>(null)
+  const [teste, setTeste] = useState(1)
 
-  // useEffect(()=> {
-  //   let width = largura.current.offsetWidth;
+  useEffect(()=> {
+    let width = largura.current.offsetWidth;
 
-  //   if(width < 480){
-  //     setTeste(1)
-  //   }else if(width > 481 && width < 768){
-  //     setTeste(2)
-  //   }else if(width > 769){
-  //     setTeste(4)
-  //   }
+    if(width < 480){
+      setTeste(1)
+    }else if(width > 481 && width < 768){
+      setTeste(2)
+    }else if(width > 769){
+      setTeste(4)
+    }
     
-  // }, [largura])
+  }, [largura])
 
   const loadMovies = async() => {
     setLoading(true)
@@ -46,7 +46,7 @@ export const App = () => {
 
   return (
     
-    <div className='container' >
+    <div className='container' ref={largura}>
         <Header />
         <button className='button' onClick={loadMovies}>Carregar filmes</button>
 
@@ -59,7 +59,7 @@ export const App = () => {
           pagination={{
             dynamicBullets: true,
           }}
-          slidesPerView={3}
+          slidesPerView={teste}
           modules={[Pagination]}
           className="mySwiper"
         >
